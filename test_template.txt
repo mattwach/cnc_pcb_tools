@@ -1,0 +1,25 @@
+(CNC Regtangle Test File)
+
+G{unit_code}                            (Units in {units}) 
+G90                                     (Absolute positioning)
+G94                                     (Units per minute feed rate mode)
+
+G01 F{z_dwell_feedrate}                 (Move to starting position)
+G01 Z{z_initial_height}
+G00 X{x_start} Y{y_start}
+M03 S{spindle_speed}                    (Start motor)
+G01 Z1.0                                (Move to dwell height)
+
+G01 F{z_plunge_feedrate}                (Approach material)
+G01 Z0.0
+G01 F{xy_feedrate}                      (Draw rectangle)
+G01 X{x_end}
+G01 Y{y_end}
+G01 X{x_start}
+G01 Y{y_start}
+
+G01 F{z_dwell_feedrate}
+G01 Z{z_initial_height}                 (Exit material)
+M05                                     (Stop motor)
+(Test complete, EOF)
+
