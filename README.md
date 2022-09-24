@@ -1165,7 +1165,7 @@ but the boost in confidence is worth the time.
 
 #### Drilling the holes
 
-Drilling the hole is easy compare to the copper.  You just load a bit and
+Drilling holes is easy compare to the copper.  You just load a bit and
 rezero the Z axis for the new bit.  *Do not rezero X or Y* as this will mess up the drill
 locations. I zero Z using the "paper" method where I get the bit within 2 mm
 of the surface, then set the Z increment to 0.1mm.  I then move a piece of
