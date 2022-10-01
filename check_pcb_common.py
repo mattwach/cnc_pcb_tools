@@ -12,5 +12,3 @@ def check_common(check):
 
   # maximum allowed z
   check.assert_lt('max_z', check.max_z(), 15.1)
-  # T1 may not be supported by your CNC machine
-  check.assert_false('T1 not present', check.has_code('T01'))
