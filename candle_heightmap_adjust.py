@@ -59,9 +59,9 @@ def candle_heightmap_adjust() -> None:
   check_token_count(lines, 0, 4)
   check_token_count(lines, 1, 4)
   check_token_count(lines, 2, 3)
-  rows_and_cols = lines[2].split(';')
-  cols = int(rows_and_cols[1])
-  rows = int(rows_and_cols[2])
+  rows_and_cols = lines[1].split(';')
+  cols = int(rows_and_cols[0])
+  rows = int(rows_and_cols[1])
 
   if len(lines) != (rows + 3):
     raise FileTooShortError(
